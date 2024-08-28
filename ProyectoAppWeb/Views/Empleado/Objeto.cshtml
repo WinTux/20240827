@@ -1,0 +1,23 @@
+﻿<h3>Datos de empleado</h3>
+<table class="table table-success table-striped">
+    <tr>
+        <td>ID</td>
+        <td>@ViewBag.emp.id</td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>@ViewBag.emp.nombre</td>
+    </tr>
+    <tr>
+        <td>Foto</td>
+        <td><img src="~/imagenes/@ViewBag.emp.foto" width="100px"></td>
+    </tr>
+    <tr>
+        <td>Salario</td>
+        <td>Bs. @ViewBag.emp.salario</td>
+    </tr>
+    <tr>
+        <td>Dias de vacación</td>
+        <td>@ViewBag.emp.diasVacacion días</td>
+    </tr>
+</table>

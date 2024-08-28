@@ -1,0 +1,21 @@
+﻿<h3>Lista de empleados</h3>
+<table class="table table-success table-striped">
+    <tr>
+        <td>ID</td>
+        <td>Nombre</td>
+        <td>Foto</td>
+        <td>Salario</td>
+        <td>Dias de vacación</td>
+        <td>Total para salarios</td>
+    </tr>
+    @foreach (var emp in ViewBag.emps)
+    {
+        <tr>
+            <td>@emp.id</td>
+            <td>@emp.nombre</td>
+            <td><img src="~/imagenes/@emp.foto" width="100px"></td>
+            <td>Bs. @emp.salario</td>
+            <td>@emp.diasVacacion días</td>
+        </tr>
+    }
+</table>
