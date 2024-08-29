@@ -1,4 +1,13 @@
 ﻿<h3>Lista de empleados</h3>
+@{
+    int x;
+    string aux = "abc";
+    x = 25;
+    string res = aux + x;
+
+    double total = 0;
+}
+
 <table class="table table-success table-striped">
     <tr>
         <td>ID</td>
@@ -17,5 +26,14 @@
             <td>Bs. @emp.salario</td>
             <td>@emp.diasVacacion días</td>
         </tr>
+        total += emp.salario;
     }
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Bs. @total</td>
+    </tr>
 </table>
