@@ -1,0 +1,45 @@
+﻿@model ProyectoAppWeb.Models.Producto
+
+<div class="container">
+    <div class="row">
+        <div class="text-center"><div class="display-3">Formulario de registro de producto</div></div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form asp-controller="FormArchivo" asp-action="Guardar" method="post">
+                <table class="table">
+                    <tr>
+                        <td>ID</td>
+                        <td>
+                            <input type="text" asp-for="Id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>
+                            <input type="text" asp-for="Nombre">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Precio</td>
+                        <td>
+                            <input type="text" asp-for="Precio">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Foto</td>
+                        <td>
+                            <input type="file" asp-for="Foto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="btn btn-success" type="submit" value="REGISTRAR">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
