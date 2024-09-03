@@ -1,0 +1,46 @@
+﻿@model ProyectoAppWeb.Models.ModeloView
+
+<div class="container">
+    <div class="row">
+        <div class="text-center">Formulario de registro</div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form asp-controller="Formulario" asp-action="Guardar" method="post">
+                <table class="table">
+                    <tr>
+                        <td>Usuario</td>
+                        <td>
+                            <input type="text" asp-for="cuenta.Usuario" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" asp-for="cuenta.Password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Descripción</td>
+                        <td>
+                            <textarea cols="30" rows="5" asp-for="cuenta.Descripcion"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Disponible</td>
+                        <td>
+                            <input type="checkbox" asp-for="cuenta.Disponible">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Genero</td>
+                        <td>
+                            <input type="radio" value="M" asp-for="cuenta.Genero"> Masculino <br>
+                            <input type="radio" value="F" asp-for="cuenta.Genero"> Femenino
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
