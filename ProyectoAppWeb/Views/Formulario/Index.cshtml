@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="text-center">Formulario de registro</div>
+        <div class="text-center"><div class="display-3">Formulario de registro</div></div>
         <div class="col-4"></div>
         <div class="col-4">
             <form asp-controller="Formulario" asp-action="Guardar" method="post">
@@ -36,6 +36,33 @@
                         <td>
                             <input type="radio" value="M" asp-for="cuenta.Genero"> Masculino <br>
                             <input type="radio" value="F" asp-for="cuenta.Genero"> Femenino
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lenguajes de programacion</td>
+                        <td>
+                            @for (var i = 0;i<Model.lenguajes.Count; i++)
+                            {
+                                <input type="hidden" asp-for="@Model.lenguajes[i].Id">
+                                <input type="hidden" asp-for="@Model.lenguajes[i].Nombre">
+                                <input type="checkbox" asp-for="@Model.lenguajes[i].estaTickeado">
+                                <label asp-for="@Model.lenguajes[i].Id">@Model.lenguajes[i].Nombre</label>
+                                <br>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cargo</td>
+                        <td>
+                            <select asp-for="cuenta.Cargo" asp-items="@Model.cargos"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="hidden" asp-for="cuenta.Id">
+                        </td>
+                        <td>
+                            <input class="btn btn-success" type="submit" value="REGISTRAR">
                         </td>
                     </tr>
                 </table>

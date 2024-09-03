@@ -31,8 +31,14 @@ namespace ProyectoAppWeb.Controllers
             modeloView.cargos = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(cargos,"Id","Nombre");
             return View("Index", modeloView);
         }
-        public ActionResult Guardar() { 
-            return View(); 
+        [HttpPost]
+        public ActionResult Guardar(ModeloView modeloView, List<Lenguaje> lenguajes) {
+            modeloView.cuenta.Lenguajes = new List<string>();
+            foreach (var len in lenguajes)
+                if (len.estaTickeado)
+                    modeloView.cuenta.Lenguajes.Add(len.Id);
+            ViewBag.cuenta = modeloView.cuenta;
+            return View("Resultado");
         }
     }
 }
