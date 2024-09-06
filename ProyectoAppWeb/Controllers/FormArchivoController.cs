@@ -36,8 +36,10 @@ namespace ProyectoAppWeb.Controllers
         [HttpPost]
         public IActionResult Guardar2(Producto2 producto, IFormFile[] fotos)
         {
+            if (!ModelState.IsValid)
+                return View("Index2");
             if (fotos == null || fotos.Length == 0)
-                return Content("Archivo(s) no valido(s)");
+                return Content("Archivo(s) no valido(s) o datos errados de producto");
             else
             {
                 producto.Fotos = new List<string>();

@@ -18,11 +18,17 @@
                         <td>
                             <input type="text" asp-for="Nombre">
                         </td>
+                        <td>
+                            <span asp-validation-for="Nombre"></span>
+                        </td>
                     </tr>
                     <tr>
                         <td>Precio</td>
                         <td>
                             <input type="text" asp-for="Precio">
+                        </td>
+                        <td>
+                            <span asp-validation-for="Precio"></span>
                         </td>
                     </tr>
                     <tr>
