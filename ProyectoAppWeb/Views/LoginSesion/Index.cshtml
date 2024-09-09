@@ -1,0 +1,18 @@
+﻿<h2>Login</h2>
+@ViewBag.error
+<form asp-controller="LoginSesion" asp-action="Login" method="post">
+    <table class="table">
+        <tr>
+            <td>Usuario:</td>
+            <td><input type="text" name="usuario"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Login"></td>
+        </tr>
+    </table>
+</form>

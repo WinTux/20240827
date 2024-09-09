@@ -1,0 +1,5 @@
+﻿@using Microsoft.AspNetCore.Http;
+<h2>Login con exito</h2>
+Bienvenido @Context.Session.GetString("usuario");
+<br />
+<a asp-controller="LoginSesion" asp-action="Logout">Log out</a>
