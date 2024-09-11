@@ -1,8 +1,12 @@
 ﻿@{
+    Layout = "~/Views/Shared/_MiPropioLayout.cshtml";
     ViewData["Title"] = "Home Page";
+}
+@section encabezado {
+    <link href="~/css/estilo.css" rel="stylesheet" type="text/css">
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4 formato">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

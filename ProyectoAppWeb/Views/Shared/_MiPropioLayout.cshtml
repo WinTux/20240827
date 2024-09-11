@@ -1,0 +1,14 @@
+﻿<html>
+    <head>
+        <title>@ViewBag.titulo</title>
+        @RenderSection("encabezado", false)
+    </head>
+    <body>
+        <a asp-controller="Home" asp-action="Index">Home</a> | <a asp-controller="EjemploShopping" asp-action="Index">Shopping</a> | <a asp-controller="Formulario" asp-action="Index">Formulario</a>
+        <br> <br>
+        @RenderBody()
+        <br>
+        <br>
+        Copyright 2024 Ejemplos Educomser
+    </body>
+</html>
