@@ -1,0 +1,28 @@
+﻿<h2>Contenido del carrito</h2>
+<table class="table">
+    <tr>
+        <td>ID</td>
+        <td>Nombre</td>
+        <td>Foto</td>
+        <td>Precio</td>
+        <td>Cantidad</td>
+        <td>Sub total</td>
+        <td>Acciones</td>
+    </tr>
+    @foreach (var item in ViewBag.carrito)
+    {
+        <tr>
+            <td>@item.producto.Id</td>
+            <td>@item.producto.Nombre</td>
+            <td><img src="~/imagenes/@item.producto.Foto" width="120px"></td>
+            <td>@item.producto.Precio</td>
+            <td>@item.cantidad</td>
+            <td>@(item.producto.Precio * item.cantidad)</td>
+            <td><a asp-controller="Carrito" asp-action="Eliminar" asp-route-id="@item.producto.Id">Eliminar item</a></td>
+        </tr>
+    }
+    <tr>
+        <td colspan="5" align="right">Total (Bs.):</td>
+        <td>@ViewBag.total</td>
+    </tr>
+</table>
