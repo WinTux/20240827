@@ -1,3 +1,5 @@
+using ProyectoAppWeb.Middleware;
+
 namespace ProyectoAppWeb
 {
     public class Program
@@ -22,7 +24,10 @@ namespace ProyectoAppWeb
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseLogPeticionMiddleware();
+            app.UseDatosClienteMiddleware();
+            //app.UseMiddleware<LogPeticionMiddleware>();
+            //app.UseMiddleware<DatosClienteMiddleware>();
             app.UseRouting();
 
             app.UseAuthorization();
