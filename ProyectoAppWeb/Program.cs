@@ -26,8 +26,6 @@ namespace ProyectoAppWeb
             app.UseStaticFiles();
             app.UseLogPeticionMiddleware();
             app.UseDatosClienteMiddleware();
-            //app.UseMiddleware<LogPeticionMiddleware>();
-            //app.UseMiddleware<DatosClienteMiddleware>();
             app.UseRouting();
 
             app.UseAuthorization();
