@@ -12,7 +12,7 @@ namespace ProyectoAppWeb.Middleware
             this.request = request;
         }
         public Task Invoke(HttpContext httpContext) {
-            Debug.WriteLine($"Fecha: {DateTime.Now.ToLongDateString}");
+            Debug.WriteLine($"Fecha: {DateTime.Now.ToLongDateString()}");
             return request(httpContext);
         }
     }
